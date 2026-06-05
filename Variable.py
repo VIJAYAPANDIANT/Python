@@ -18,3 +18,4 @@ print(full_name.split()) #['Abbas', 'Ali']
 print(full_name.join(['Abbas', 'Ali'])) #AbbasAli
 print(full_name.format("Abbas", "Ali")) #Abbas Ali
 print(full_name.fstring("Abbas", "Ali")) #Abbas Ali
+print("i love Java and Python ❤️") #i love Java and Python ❤️
