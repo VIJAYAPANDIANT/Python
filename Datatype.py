@@ -1,39 +1,69 @@
-# Datatype
+# =====================================================================
+# FILE: Datatype.py
+# DESCRIPTION: Overview of core primitive, non-primitive, and user-defined datatypes.
+#
+# SYNTAX QUICK-REFERENCE:
+#   x: int = 10
+#   y: float = 3.14
+#   name: str = "Alice"
+#   is_true: bool = True
+#   empty: None = None
+# =====================================================================
 
-#Define
+# Datatype.py
+# Reference Guide: Primitive, Non-Primitive, and User-Defined Datatypes in Python
 
-#Datatype is a classification of data that tells the compiler or interpreter how the programmer intends to use the data. It defines the type of data that can be stored in a variable and the operations that can be performed on that data.
+# ==========================================
+# 1. WHAT IS A DATATYPE?
+# ==========================================
+# A datatype defines the classification of data, telling the interpreter how 
+# the developer intends to use the data and what operations can be performed on it.
 
-#Types of Datatypes:
+# ==========================================
+# 2. PRIMITIVE DATATYPES
+# ==========================================
+# Core built-in datatypes for single values.
+print("--- 1. PRIMITIVE DATATYPES ---")
 
-#1. Primitive Datatypes: These are the basic datatypes that are built into the programming language. Examples include:
-#   - int: Represents integer values (e.g., 1, 2, 3)
-#   - float: Represents floating-point numbers (e.g., 3.14, 2.718)  
-#   - str: Represents strings of characters (e.g., "Hello, World!")
-#   - bool: Represents boolean values (e.g., True, False)
-#2. Non-Primitive Datatypes: These are more complex datatypes that are not built into the programming language but can be created by the programmer. Examples include:
-#   - list: Represents an ordered collection of items (e.g., [1, 2, 3])
-#   - tuple: Represents an ordered, immutable collection of items (e.g., (1, 2, 3))
-#   - dict: Represents a collection of key-value pairs (e.g., {"name": "Alice", "age": 30})
-#   - set: Represents an unordered collection of unique items (e.g., {1, 2, 3})
-#3. User-Defined Datatypes: These are datatypes that are defined by the programmer using classes. They can have their own attributes and methods. Examples include:
-#   - class: Represents a blueprint for creating objects (e.g., class Person: pass
-#   - object: Represents an instance of a class (e.g., person1 = Person())
+age: int = 30               # Integer (int)
+pi: float = 3.14            # Floating point (float)
+name: str = "Alice"         # String (str)
+is_student: bool = True     # Boolean (bool)
+empty_val = None            # NoneType (None)
 
-#1. Primitive Datatypes
+print(f"Integer age:     {age} ({type(age)})")
+print(f"Float pi:        {pi} ({type(pi)})")
+print(f"String name:     {name} ({type(name)})")
+print(f"Boolean student: {is_student} ({type(is_student)})")
+print(f"None Value:      {empty_val} ({type(empty_val)})")
+print()
 
-#Integer
-age = 30
-print(age) #30
+# ==========================================
+# 3. NON-PRIMITIVE DATATYPES (Collections)
+# ==========================================
+# Structures that store collections of values.
+print("--- 2. NON-PRIMITIVE DATATYPES ---")
 
-#Float
-pi = 3.14
-print(pi) #3.14
+user_list = [1, 2, 3]                                  # List (ordered, mutable)
+user_tuple = (1, 2, 3)                                 # Tuple (ordered, immutable)
+user_dict = {"name": "Alice", "age": 30}               # Dictionary (key-value mapping)
+user_set = {1, 2, 3}                                   # Set (unordered collection of unique items)
 
-#String
-name = "Alice"
-print(name) #Alice
+print(f"List:       {user_list} ({type(user_list)})")
+print(f"Tuple:      {user_tuple} ({type(user_tuple)})")
+print(f"Dictionary: {user_dict} ({type(user_dict)})")
+print(f"Set:        {user_set} ({type(user_set)})")
+print()
 
-#Boolean
-is_student = True
-print(is_student) #True
+# ==========================================
+# 4. USER-DEFINED DATATYPES (Classes)
+# ==========================================
+# Custom blueprints created using classes.
+print("--- 3. USER-DEFINED DATATYPES ---")
+
+class Person:
+    pass
+
+person1 = Person()
+print(f"Custom Object Instance: {person1} ({type(person1)})")
+print()

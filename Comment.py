@@ -1,29 +1,53 @@
-#Comments in Python:
+# =====================================================================
+# FILE: Comment.py
+# DESCRIPTION: Comments and code documentation.
+#
+# SYNTAX QUICK-REFERENCE:
+#   # Single line comment
+#
+#   """
+#   Docstring used to document a function,
+#   accessible via func.__doc__
+#   """
+# =====================================================================
 
-#Explaination:
+# Comment.py
+# Reference Guide: Code Documentation and Comments in Python
 
-#Comments are used to explain the code.
-#Comments are not executed by the Python interpreter.
-#Comments are used to make the code more readable.
-#Comments are used to document the code.
-#Comments are used to test the code.
+# ==========================================
+# 1. WHY USE COMMENTS?
+# ==========================================
+# - Explain how code works to make it readable.
+# - Test code blocks by commenting them out.
+# - Document classes, methods, and functions.
+# - Comments are completely ignored by the Python interpreter during execution.
 
-#Types of Comments:
+print("--- 1. COMMENT TYPES ---")
 
-#1. Single-line comments
-#2. Multi-line comments
-#3. Docstrings
+# 1. Single-line comments: Use the hash mark (#).
+# This is a single-line comment.
+x = 10  # This is an inline comment.
 
-#Example of single-line comment:
+# 2. Multi-line comments: Python doesn't have a specific syntax for multi-line comments.
+# You can write multiple single-line comments:
+# Line 1 of comment
+# Line 2 of comment
 
-#This is a single-line comment
+# 3. Docstrings (Documentation Strings): 
+# Used to document modules, classes, and functions. 
+# Enclosed in triple quotes (''' or """). If not assigned to a variable, they act as comments.
+def add(a, b):
+    """
+    Returns the sum of two integers.
+    
+    Parameters:
+    a (int): First value
+    b (int): Second value
+    
+    Returns:
+    int: Sum of first and second value
+    """
+    return a + b
 
-#Example of multi-line comment:
-
-#This is a multi-line comment
-#This is a multi-line comment
-#This is a multi-line comment
-
-#Example of docstring:
-
-"""This is a docstring"""
+print(f"Docstring for add(): '{add.__doc__.strip()}'")
+print()
